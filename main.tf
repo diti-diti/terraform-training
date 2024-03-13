@@ -14,23 +14,23 @@ data "aws_ami" "app_ami" {
   owners = ["979382823631"] # Bitnami
 }
 
-resource "aws_instance" "blog" {
-  ami           = data.aws_ami.app_ami.id
-  instance_type = var.instance_type
+# resource "aws_instance" "blog" {
+#   ami           = data.aws_ami.app_ami.id
+#   instance_type = var.instance_type
 
-  tags = {
-    Name = "HelloWorld1s"
-  }
-}
+#   tags = {
+#     Name = "HelloWorld1s"
+#   }
+# }
 
-resource "aws_instance" "additional_vm1" {
-  ami           = data.aws_ami.app_ami.id
-  instance_type = var.instance_type  // Typ instancji możesz zmienić według swoich potrzeb
+# resource "aws_instance" "additional_vm1" {
+#   ami           = data.aws_ami.app_ami.id
+#   instance_type = var.instance_type  // Typ instancji możesz zmienić według swoich potrzeb
 
-  tags = {
-    Name = "AdditionalVM1"
-  }
-}
+#   tags = {
+#     Name = "AdditionalVM1"
+#   }
+# }
 
 # resource "aws_instance" "additional_vm2" {
 #   ami           = data.aws_ami.app_ami.id
