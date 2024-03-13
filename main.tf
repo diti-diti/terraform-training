@@ -25,7 +25,7 @@ resource "aws_instance" "blog" {
 
 resource "aws_instance" "additional_vm1" {
   ami           = data.aws_ami.app_ami.id
-  instance_type = "t2.micro"  // Typ instancji możesz zmienić według swoich potrzeb
+  instance_type = var.instance_type  // Typ instancji możesz zmienić według swoich potrzeb
 
   tags = {
     Name = "AdditionalVM1"
@@ -34,7 +34,7 @@ resource "aws_instance" "additional_vm1" {
 
 resource "aws_instance" "additional_vm2" {
   ami           = data.aws_ami.app_ami.id
-  instance_type = "t2.micro"  // Typ instancji możesz zmienić według swoich potrzeb
+  instance_type = var.instance_type // Typ instancji możesz zmienić według swoich potrzeb
 
   tags = {
     Name = "AdditionalVM2"
