@@ -32,11 +32,11 @@ resource "aws_instance" "additional_vm1" {
   }
 }
 
-resource "aws_instance" "additional_vm2" {
-  ami           = data.aws_ami.app_ami.id
-  instance_type = var.instance_type // Typ instancji możesz zmienić według swoich potrzeb
+# resource "aws_instance" "additional_vm2" {
+#   ami           = data.aws_ami.app_ami.id
+#   instance_type = var.instance_type // Typ instancji możesz zmienić według swoich potrzeb
 
-  tags = {
-    Name = "AdditionalVM2"
-  }
-}
+#   tags = {
+#     Name = "AdditionalVM2"
+#   }
+# }
