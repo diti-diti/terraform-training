@@ -1,7 +1,7 @@
 # Tworzenie S3 bucket
 resource "aws_s3_bucket" "my_bucket" {
   bucket = var.bucket_name
-  acl    = "public-read"  # Ustawienie ACL umożliwiającego dostęp publiczny
+  acl    = "public-read"  # Ustawienie ACL umssożliwiającego dostęp publiczny
 }
 
 # Definicja polityki wiadra
