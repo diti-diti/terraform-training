@@ -5,7 +5,7 @@ terraform {
     }
   }
 }
-
+#oszukanmiec by odpalic to bez PR
 provider "aws" {
   region  = "eu-north-1"
 }
